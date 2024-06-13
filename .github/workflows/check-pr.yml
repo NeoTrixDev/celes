@@ -1,0 +1,30 @@
+name: Check PRs on service
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - "app/**"
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  lint-tests-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.12"
+
+      - name: Upgrade pip and install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install --no-cache-dir -r requirements.txt
+
+      - name: Run unit tests and coverage
+        run: |
+          export PYTHONPATH=$(pwd)
+          pytest

@@ -1,0 +1,7 @@
+fastapi
+firebase_admin
+pandas
+pyarrow
+pytest
+requests
+gdown

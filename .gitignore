@@ -1,0 +1,7 @@
+service-account-file.json
+celes.csv
+data/**
+*.zip
+.idea/**
+.DS_Store
+**/__pycache__/**
