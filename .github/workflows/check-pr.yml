@@ -2,7 +2,7 @@ name: Check PRs on service
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main" , "master"]
     paths:
       - "app/**"
     types: [ opened, synchronize, reopened ]
