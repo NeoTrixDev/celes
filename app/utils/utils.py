@@ -10,7 +10,7 @@ def load_csv_file() -> pd.DataFrame:
     Load a CSV file into a pandas DataFrame and convert the 'KeyDate' column to datetime.date type.
 
     Returns:
-        pd.DataFrame: A DataFrame containing the loaded data with 'KeyDate' as datetime.date.
+        pd.DataFrame: A DataFrame containing the loaded data with 'KeyDate'.
     """
     root_dir = os.path.dirname(os.path.abspath(__file__))
     # Construct the path to the CSV file
